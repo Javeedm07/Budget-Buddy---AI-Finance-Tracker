@@ -38,7 +38,7 @@ const clerk = clerkMiddleware(async (auth, req) => {
 });
 
 // Chain middlewares - ArcJet runs first, then Clerk
-export default createMiddleware(clerk);
+export default createMiddleware(aj, clerk);
 // export const config = {
 //   matcher: [
 //     "/dashboard/:path*",
