@@ -29,15 +29,24 @@ const aj = arcjet({
 
 // Create base Clerk middleware
 const clerk = clerkMiddleware(async (auth, req) => {
-  const { userId } = await auth();
+  const { userId, redirectToSignIn } = await auth();
 
   if (!userId && isProtectedRoute(req)) {
-    const { redirectToSignIn } = await auth();
     return redirectToSignIn();
   }
 
   return NextResponse.next();
 });
+// const clerk = clerkMiddleware(async (auth, req) => {
+//   const { userId } = await auth();
+
+//   if (!userId && isProtectedRoute(req)) {
+//     const { redirectToSignIn } = await auth();
+//     return redirectToSignIn();
+//   }
+
+//   return NextResponse.next();
+// });
 
 // Chain middlewares - ArcJet runs first, then Clerk
 export default createMiddleware(aj, clerk);
