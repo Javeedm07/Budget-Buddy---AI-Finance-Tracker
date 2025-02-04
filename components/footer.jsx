@@ -94,30 +94,30 @@ const Footer = () => {
               Connect
             </h3>
             <div className="flex justify-center md:justify-start space-x-4">
-              <a
+              <Link
                 href="https://github.com/javeedm07"
                 className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Github size={20} />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://twitter.com/javeed_m07"
                 className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Twitter size={20} />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://youtube.com"
                 className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Youtube size={20} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -126,14 +126,14 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-400 text-sm flex items-center justify-center gap-2">
             Made by
-            <a
+            <Link
               href="https://javeed-dev.vercel.app/"
               className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
               Javeed{" "}
-            </a>
+            </Link>
           </p>
           <p className="text-gray-500 text-sm mt-2">
             © {currentYear} Budget Buddy. All rights reserved.
