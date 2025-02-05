@@ -194,7 +194,6 @@ export function TransactionTable({ transactions }) {
     setCurrentPage(newPage);
     setSelectedIds([]); // Clear selections on page change
   };
-
   return (
     <div className="space-y-4 bg-gray-950 text-gray-300 p-4 rounded-md dark">
       {deleteLoading && (
